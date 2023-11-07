@@ -6,12 +6,24 @@
     *Substitua a palavra Visitante pelo nome do usuário, que será fornecido pelo próprio usuário.
     */
 
-    //Entrada
+    let cumprimento=function(){
+        const horasAtual = new Date().getHours();
+        if (horasAtual<12){
+            return 'bom dia';
+        }
+        else if (horasAtual<18) {
+            return 'boa tarde'
+        }
+        else{
+            return 'boa noite'
+        }
+    }
 
+    let nome = prompt ("informe o seu nome");
 
-    //Processamento
+    function saudacao(msg, nome = "Visitante") {
+        alert(`${msg} ${nome}`);
+    }
 
-
-    //Saída
-    
+    saudacao(cumprimento(),  nome);
 </script>
